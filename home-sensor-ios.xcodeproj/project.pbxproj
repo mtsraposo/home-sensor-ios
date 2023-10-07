@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */; };
+		AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959D2AD18952003C3C74 /* ContentView.swift */; };
+		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
+		AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */; };
+		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
+		AD7095B72AD18955003C3C74 /* home_sensor_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */; };
+		AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD7095A92AD18955003C3C74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD7095902AD18952003C3C74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD7095972AD18952003C3C74;
+			remoteInfo = "home-sensor-ios";
+		};
+		AD7095B32AD18955003C3C74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD7095902AD18952003C3C74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD7095972AD18952003C3C74;
+			remoteInfo = "home-sensor-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosApp.swift; sourceTree = "<group>"; };
+		AD70959D2AD18952003C3C74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AD70959F2AD18955003C3C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD7095A82AD18955003C3C74 /* home-sensor-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-sensor-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosTests.swift; sourceTree = "<group>"; };
+		AD7095B22AD18955003C3C74 /* home-sensor-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-sensor-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITests.swift; sourceTree = "<group>"; };
+		AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD7095952AD18952003C3C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095A52AD18955003C3C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095AF2AD18955003C3C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD70958F2AD18952003C3C74 = {
+			isa = PBXGroup;
+			children = (
+				AD70959A2AD18952003C3C74 /* home-sensor-ios */,
+				AD7095AB2AD18955003C3C74 /* home-sensor-iosTests */,
+				AD7095B52AD18955003C3C74 /* home-sensor-iosUITests */,
+				AD7095992AD18952003C3C74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD7095992AD18952003C3C74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD7095982AD18952003C3C74 /* home-sensor-ios.app */,
+				AD7095A82AD18955003C3C74 /* home-sensor-iosTests.xctest */,
+				AD7095B22AD18955003C3C74 /* home-sensor-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD70959A2AD18952003C3C74 /* home-sensor-ios */ = {
+			isa = PBXGroup;
+			children = (
+				AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */,
+				AD70959D2AD18952003C3C74 /* ContentView.swift */,
+				AD70959F2AD18955003C3C74 /* Assets.xcassets */,
+				AD7095A12AD18955003C3C74 /* Preview Content */,
+			);
+			path = "home-sensor-ios";
+			sourceTree = "<group>";
+		};
+		AD7095A12AD18955003C3C74 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD7095AB2AD18955003C3C74 /* home-sensor-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */,
+			);
+			path = "home-sensor-iosTests";
+			sourceTree = "<group>";
+		};
+		AD7095B52AD18955003C3C74 /* home-sensor-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */,
+				AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */,
+			);
+			path = "home-sensor-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD7095972AD18952003C3C74 /* home-sensor-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD7095BC2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-ios" */;
+			buildPhases = (
+				AD7095942AD18952003C3C74 /* Sources */,
+				AD7095952AD18952003C3C74 /* Frameworks */,
+				AD7095962AD18952003C3C74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "home-sensor-ios";
+			productName = "home-sensor-ios";
+			productReference = AD7095982AD18952003C3C74 /* home-sensor-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD7095A72AD18955003C3C74 /* home-sensor-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD7095BF2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosTests" */;
+			buildPhases = (
+				AD7095A42AD18955003C3C74 /* Sources */,
+				AD7095A52AD18955003C3C74 /* Frameworks */,
+				AD7095A62AD18955003C3C74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD7095AA2AD18955003C3C74 /* PBXTargetDependency */,
+			);
+			name = "home-sensor-iosTests";
+			productName = "home-sensor-iosTests";
+			productReference = AD7095A82AD18955003C3C74 /* home-sensor-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD7095B12AD18955003C3C74 /* home-sensor-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD7095C22AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosUITests" */;
+			buildPhases = (
+				AD7095AE2AD18955003C3C74 /* Sources */,
+				AD7095AF2AD18955003C3C74 /* Frameworks */,
+				AD7095B02AD18955003C3C74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD7095B42AD18955003C3C74 /* PBXTargetDependency */,
+			);
+			name = "home-sensor-iosUITests";
+			productName = "home-sensor-iosUITests";
+			productReference = AD7095B22AD18955003C3C74 /* home-sensor-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD7095902AD18952003C3C74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AD7095972AD18952003C3C74 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					AD7095A72AD18955003C3C74 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AD7095972AD18952003C3C74;
+					};
+					AD7095B12AD18955003C3C74 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AD7095972AD18952003C3C74;
+					};
+				};
+			};
+			buildConfigurationList = AD7095932AD18952003C3C74 /* Build configuration list for PBXProject "home-sensor-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD70958F2AD18952003C3C74;
+			productRefGroup = AD7095992AD18952003C3C74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD7095972AD18952003C3C74 /* home-sensor-ios */,
+				AD7095A72AD18955003C3C74 /* home-sensor-iosTests */,
+				AD7095B12AD18955003C3C74 /* home-sensor-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD7095962AD18952003C3C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */,
+				AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095A62AD18955003C3C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095B02AD18955003C3C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD7095942AD18952003C3C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */,
+				AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095A42AD18955003C3C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7095AE2AD18955003C3C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7095B72AD18955003C3C74 /* home_sensor_iosUITests.swift in Sources */,
+				AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD7095AA2AD18955003C3C74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD7095972AD18952003C3C74 /* home-sensor-ios */;
+			targetProxy = AD7095A92AD18955003C3C74 /* PBXContainerItemProxy */;
+		};
+		AD7095B42AD18955003C3C74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD7095972AD18952003C3C74 /* home-sensor-ios */;
+			targetProxy = AD7095B32AD18955003C3C74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AD7095BA2AD18955003C3C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD7095BB2AD18955003C3C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD7095BD2AD18955003C3C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"home-sensor-ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD7095BE2AD18955003C3C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"home-sensor-ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD7095C02AD18955003C3C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/home-sensor-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/home-sensor-ios";
+			};
+			name = Debug;
+		};
+		AD7095C12AD18955003C3C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/home-sensor-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/home-sensor-ios";
+			};
+			name = Release;
+		};
+		AD7095C32AD18955003C3C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "home-sensor-ios";
+			};
+			name = Debug;
+		};
+		AD7095C42AD18955003C3C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.home-sensor-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "home-sensor-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD7095932AD18952003C3C74 /* Build configuration list for PBXProject "home-sensor-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7095BA2AD18955003C3C74 /* Debug */,
+				AD7095BB2AD18955003C3C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD7095BC2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7095BD2AD18955003C3C74 /* Debug */,
+				AD7095BE2AD18955003C3C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD7095BF2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7095C02AD18955003C3C74 /* Debug */,
+				AD7095C12AD18955003C3C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD7095C22AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7095C32AD18955003C3C74 /* Debug */,
+				AD7095C42AD18955003C3C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD7095902AD18952003C3C74 /* Project object */;
+}
