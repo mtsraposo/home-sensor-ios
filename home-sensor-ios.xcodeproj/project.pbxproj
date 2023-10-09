@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C6B2AD41D000092DD16 /* AppDelegate.swift */; };
 		AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */; };
+		AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */; };
+		AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */; };
+		AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
 		AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */; };
 		AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959D2AD18952003C3C74 /* ContentView.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		AD615C6B2AD41D000092DD16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notification.swift"; sourceTree = "<group>"; };
+		AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerTests.swift; sourceTree = "<group>"; };
+		AD615C762AD4B6A10092DD16 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosApp.swift; sourceTree = "<group>"; };
 		AD70959D2AD18952003C3C74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD615C6F2AD4B2C00092DD16 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AD615C722AD4B3130092DD16 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AD615C752AD4B6950092DD16 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD615C762AD4B6A10092DD16 /* Environment.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		AD70958F2AD18952003C3C74 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +128,8 @@
 		AD70959A2AD18952003C3C74 /* home-sensor-ios */ = {
 			isa = PBXGroup;
 			children = (
+				AD615C752AD4B6950092DD16 /* Common */,
+				AD615C6F2AD4B2C00092DD16 /* Managers */,
 				AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */,
 				AD70959D2AD18952003C3C74 /* ContentView.swift */,
 				AD70959F2AD18955003C3C74 /* Assets.xcassets */,
@@ -119,6 +151,7 @@
 		AD7095AB2AD18955003C3C74 /* home-sensor-iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD615C722AD4B3130092DD16 /* Managers */,
 				AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */,
 			);
 			path = "home-sensor-iosTests";
@@ -264,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */,
+				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
 				AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */,
 				AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */,
+				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
 				AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */,
 				AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
