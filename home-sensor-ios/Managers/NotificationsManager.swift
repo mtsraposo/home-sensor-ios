@@ -12,24 +12,7 @@ import UIKit
 class NotificationManager {
     
     func registerForRemoteNotifications(completion: @escaping (Error?) -> Void) {
-        requestAuthorization { granted in
-            guard granted else {
-                completion(NSError(domain: Environment.appDomain, code: 1, userInfo: [NSLocalizedDescriptionKey : "Authorization not granted"]))
-                return
-            }
-            
-            self.getNotificationSettings { settings in
-                guard settings.authorizationStatus == .authorized else {
-                    completion(NSError(domain: Environment.appDomain, code: 2, userInfo: [NSLocalizedDescriptionKey : "Authorization status not authorized"]))
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                    completion(nil)
-                }
-            }
-        }
+        requestAuthorization(completion: self.authorizationCompletionHandler(completion: completion))
     }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
@@ -37,10 +20,33 @@ class NotificationManager {
             completion(granted)
         }
     }
+
+    func authorizationCompletionHandler(completion: @escaping (Error?) -> Void) -> (Bool) -> Void {
+        return { granted in
+            guard granted else {
+                completion(NSError(domain: Environment.appDomain, code: 1, userInfo: [NSLocalizedDescriptionKey : "Authorization not granted"]))
+                return
+            }
+            self.getNotificationSettings(completion: self.settingsCompletionHandler(completion: completion))
+        }
+    }
     
     func getNotificationSettings(completion: @escaping (UNNotificationSettings) -> Void) {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             completion(settings)
+        }
+    }
+
+    func settingsCompletionHandler(completion: @escaping (Error?) -> Void) -> (UNNotificationSettings) -> Void {
+        return { settings in
+            guard settings.authorizationStatus == .authorized else {
+                completion(NSError(domain: Environment.appDomain, code: 2, userInfo: [NSLocalizedDescriptionKey : "Authorization status not authorized"]))
+                return
+            }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+                completion(nil)
+            }
         }
     }
 }

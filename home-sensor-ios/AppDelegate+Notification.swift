@@ -16,7 +16,7 @@ extension AppDelegate {
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         let userInfo = notification.request.content.userInfo
         // handle the notification
-        completionHandler([.alert, .sound, .badge])
+        completionHandler([.banner, .sound, .badge])
     }
     
     // When the user responds to a notification (for example by tapping on it)

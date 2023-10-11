@@ -14,6 +14,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     let notificationManager = NotificationManager()
+    let snsManager = SNSManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -31,11 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let token = tokenParts.joined()
-        print("Device Token: \(token)")
-        
-        // Use this device token to create a subscription to your SNS topic
+        snsManager.subscribeDeviceToTopic(deviceToken: deviceToken) { error in
+            if let error = error {
+                print("Error subscribing to topic: \(error)")
+            } else {
+                print("Successfully subscribed to topic")
+            }
+        }
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

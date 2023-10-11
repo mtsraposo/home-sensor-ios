@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D93611366F02EF1DC9B526B /* Pods_home_sensor_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03A48F6A3E37A0A0F8569FB /* Pods_home_sensor_iosTests.framework */; };
+		A56BE4E0461D62A004208D5A /* Pods_home_sensor_ios_home_sensor_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6822342455DFC9AE3499C73D /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */; };
 		AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C6B2AD41D000092DD16 /* AppDelegate.swift */; };
 		AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */; };
 		AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */; };
 		AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */; };
 		AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
+		AD615C7C2AD6B6FF0092DD16 /* AWSCore in Frameworks */ = {isa = PBXBuildFile; productRef = AD615C7B2AD6B6FF0092DD16 /* AWSCore */; };
+		AD615C7E2AD6B6FF0092DD16 /* AWSSNS in Frameworks */ = {isa = PBXBuildFile; productRef = AD615C7D2AD6B6FF0092DD16 /* AWSSNS */; };
+		AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C782AD6B2990092DD16 /* SNSManager.swift */; };
 		AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */; };
 		AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70959D2AD18952003C3C74 /* ContentView.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
@@ -19,6 +24,7 @@
 		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
 		AD7095B72AD18955003C3C74 /* home_sensor_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */; };
 		AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */; };
+		CBD9D28655B9CFAB56A6F26D /* Pods_home_sensor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E6D061428DE5210A94F5F /* Pods_home_sensor_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BA270A59718839E1249A71A /* Pods-home-sensor-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-iosTests/Pods-home-sensor-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		332472C9D237FCB44A7DFEE0 /* Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CE8FF2F73D202BBB90CD800 /* Pods-home-sensor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6822342455DFC9AE3499C73D /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios_home_sensor_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CAAC65A69D242E9A283B846 /* Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD615C6B2AD41D000092DD16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notification.swift"; sourceTree = "<group>"; };
 		AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerTests.swift; sourceTree = "<group>"; };
 		AD615C762AD4B6A10092DD16 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AD615C782AD6B2990092DD16 /* SNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSManager.swift; sourceTree = "<group>"; };
 		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD70959B2AD18952003C3C74 /* home_sensor_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosApp.swift; sourceTree = "<group>"; };
 		AD70959D2AD18952003C3C74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +66,10 @@
 		AD7095B22AD18955003C3C74 /* home-sensor-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-sensor-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITests.swift; sourceTree = "<group>"; };
 		AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D08E6D061428DE5210A94F5F /* Pods_home_sensor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03A48F6A3E37A0A0F8569FB /* Pods_home_sensor_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFF749F0151E70C2D89B84B /* Pods-home-sensor-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-iosTests.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-iosTests/Pods-home-sensor-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC9BB8514AC5FB26A34FEA7D /* Pods-home-sensor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD615C7C2AD6B6FF0092DD16 /* AWSCore in Frameworks */,
+				AD615C7E2AD6B6FF0092DD16 /* AWSSNS in Frameworks */,
+				CBD9D28655B9CFAB56A6F26D /* Pods_home_sensor_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93611366F02EF1DC9B526B /* Pods_home_sensor_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,15 +95,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56BE4E0461D62A004208D5A /* Pods_home_sensor_ios_home_sensor_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BCA57394041B83CB5E3F95D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08E6D061428DE5210A94F5F /* Pods_home_sensor_ios.framework */,
+				6822342455DFC9AE3499C73D /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */,
+				E03A48F6A3E37A0A0F8569FB /* Pods_home_sensor_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD615C6F2AD4B2C00092DD16 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AD615C782AD6B2990092DD16 /* SNSManager.swift */,
 				AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */,
 			);
 			path = Managers;
@@ -112,6 +144,8 @@
 				AD7095AB2AD18955003C3C74 /* home-sensor-iosTests */,
 				AD7095B52AD18955003C3C74 /* home-sensor-iosUITests */,
 				AD7095992AD18952003C3C74 /* Products */,
+				B4224FCF6F221A4920EE910C /* Pods */,
+				0BCA57394041B83CB5E3F95D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +200,20 @@
 			path = "home-sensor-iosUITests";
 			sourceTree = "<group>";
 		};
+		B4224FCF6F221A4920EE910C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC9BB8514AC5FB26A34FEA7D /* Pods-home-sensor-ios.debug.xcconfig */,
+				5CE8FF2F73D202BBB90CD800 /* Pods-home-sensor-ios.release.xcconfig */,
+				332472C9D237FCB44A7DFEE0 /* Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig */,
+				7CAAC65A69D242E9A283B846 /* Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig */,
+				1BA270A59718839E1249A71A /* Pods-home-sensor-iosTests.debug.xcconfig */,
+				FAFF749F0151E70C2D89B84B /* Pods-home-sensor-iosTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,15 +221,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7095BC2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-ios" */;
 			buildPhases = (
+				3C6000FBD11ACF13197AB48B /* [CP] Check Pods Manifest.lock */,
 				AD7095942AD18952003C3C74 /* Sources */,
 				AD7095952AD18952003C3C74 /* Frameworks */,
 				AD7095962AD18952003C3C74 /* Resources */,
+				0037DC963EAA8798BBE0E109 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "home-sensor-ios";
+			packageProductDependencies = (
+				AD615C7B2AD6B6FF0092DD16 /* AWSCore */,
+				AD615C7D2AD6B6FF0092DD16 /* AWSSNS */,
+			);
 			productName = "home-sensor-ios";
 			productReference = AD7095982AD18952003C3C74 /* home-sensor-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7095BF2AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosTests" */;
 			buildPhases = (
+				7670C764051FC99D9A77C04D /* [CP] Check Pods Manifest.lock */,
 				AD7095A42AD18955003C3C74 /* Sources */,
 				AD7095A52AD18955003C3C74 /* Frameworks */,
 				AD7095A62AD18955003C3C74 /* Resources */,
@@ -208,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7095C22AD18955003C3C74 /* Build configuration list for PBXNativeTarget "home-sensor-iosUITests" */;
 			buildPhases = (
+				F3CDEE0CB474A0413ECFB407 /* [CP] Check Pods Manifest.lock */,
 				AD7095AE2AD18955003C3C74 /* Sources */,
 				AD7095AF2AD18955003C3C74 /* Frameworks */,
 				AD7095B02AD18955003C3C74 /* Resources */,
+				A47055EDDB2DA9B7CB103385 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +311,9 @@
 				Base,
 			);
 			mainGroup = AD70958F2AD18952003C3C74;
+			packageReferences = (
+				AD615C7A2AD6B6FF0092DD16 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
+			);
 			productRefGroup = AD7095992AD18952003C3C74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,6 +351,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0037DC963EAA8798BBE0E109 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C6000FBD11ACF13197AB48B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-home-sensor-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7670C764051FC99D9A77C04D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-home-sensor-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A47055EDDB2DA9B7CB103385 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3CDEE0CB474A0413ECFB407 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-home-sensor-ios-home-sensor-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD7095942AD18952003C3C74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -298,6 +461,7 @@
 			files = (
 				AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */,
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
+				AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */,
 				AD70959E2AD18952003C3C74 /* ContentView.swift in Sources */,
 				AD70959C2AD18952003C3C74 /* home_sensor_iosApp.swift in Sources */,
 				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
@@ -460,6 +624,7 @@
 		};
 		AD7095BD2AD18955003C3C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9BB8514AC5FB26A34FEA7D /* Pods-home-sensor-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +653,7 @@
 		};
 		AD7095BE2AD18955003C3C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CE8FF2F73D202BBB90CD800 /* Pods-home-sensor-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +682,7 @@
 		};
 		AD7095C02AD18955003C3C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA270A59718839E1249A71A /* Pods-home-sensor-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +702,7 @@
 		};
 		AD7095C12AD18955003C3C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFF749F0151E70C2D89B84B /* Pods-home-sensor-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +722,7 @@
 		};
 		AD7095C32AD18955003C3C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 332472C9D237FCB44A7DFEE0 /* Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +740,7 @@
 		};
 		AD7095C42AD18955003C3C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAAC65A69D242E9A283B846 /* Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +796,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD615C7A2AD6B6FF0092DD16 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.33.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD615C7B2AD6B6FF0092DD16 /* AWSCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD615C7A2AD6B6FF0092DD16 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSCore;
+		};
+		AD615C7D2AD6B6FF0092DD16 /* AWSSNS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD615C7A2AD6B6FF0092DD16 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSSNS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD7095902AD18952003C3C74 /* Project object */;
 }

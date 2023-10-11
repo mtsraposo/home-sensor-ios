@@ -1,0 +1,49 @@
+# Derived Data and Build Products
+DerivedData/
+*.build/
+
+# User-Specific Settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+
+# Carthage Directories
+Carthage/Build/
+
+# Swift Package Manager
+.build/
+
+# Miscellaneous
+.DS_Store
+*.swp
+*~.nib
+
+# Xcode Workspace Checkpoints
+.xccheckout
+*.moved-aside
+
+# Xcode Schemes
+*.xcscheme
+
+# Xcode Workspace Settings
+xcshareddata/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+
+# Profiler Data
+*.xcappdata
+*.xcscmblueprint
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# CocoaPods
+Pods/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/

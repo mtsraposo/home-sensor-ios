@@ -14,4 +14,7 @@ struct Environment {
         }
         return appDomain
     }
+    static let snsTopicArn: String = ProcessInfo.processInfo.environment["SNS_TOPIC_ARN"] ?? ""
+    static let snsAccessKey: String = ProcessInfo.processInfo.environment["SNS_ACCESS_KEY"] ?? ""
+    static let snsSecretKey: String = ProcessInfo.processInfo.environment["SNS_SECRET_KEY"] ?? ""
 }
