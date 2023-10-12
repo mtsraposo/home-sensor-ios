@@ -27,6 +27,11 @@
 		AD615C942AD813720092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
 		AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */; };
 		AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */; };
+		AD615C992AD856BD0092DD16 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C982AD856BD0092DD16 /* SNSService.swift */; };
+		AD615C9D2AD857610092DD16 /* SNSManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */; };
+		AD615C9E2AD857770092DD16 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C982AD856BD0092DD16 /* SNSService.swift */; };
+		AD615C9F2AD8577B0092DD16 /* MockSNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */; };
+		AD615CA02AD857890092DD16 /* SNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C782AD6B2990092DD16 /* SNSManager.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
 		AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */; };
 		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
@@ -68,6 +73,9 @@
 		AD615C892AD6BF9F0092DD16 /* MockApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplication.swift; sourceTree = "<group>"; };
 		AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationSettings.swift; sourceTree = "<group>"; };
+		AD615C982AD856BD0092DD16 /* SNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSService.swift; sourceTree = "<group>"; };
+		AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSNSService.swift; sourceTree = "<group>"; };
+		AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSManagerTests.swift; sourceTree = "<group>"; };
 		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD70959F2AD18955003C3C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */,
+				AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 				AD615C812AD6BE880092DD16 /* UserNotificationCenter.swift */,
 				AD615C872AD6BF770092DD16 /* Application.swift */,
 				AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */,
+				AD615C982AD856BD0092DD16 /* SNSService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 				AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */,
 				AD615C892AD6BF9F0092DD16 /* MockApplication.swift */,
 				AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */,
+				AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -491,6 +502,7 @@
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
 				AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */,
 				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
+				AD615C992AD856BD0092DD16 /* SNSService.swift in Sources */,
 				AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */,
 				AD615C822AD6BE880092DD16 /* UserNotificationCenter.swift in Sources */,
 				AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */,
@@ -502,12 +514,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD615C8C2AD6C0410092DD16 /* MockApplication.swift in Sources */,
+				AD615C9F2AD8577B0092DD16 /* MockSNSService.swift in Sources */,
+				AD615CA02AD857890092DD16 /* SNSManager.swift in Sources */,
 				AD615C912AD8052F0092DD16 /* Application.swift in Sources */,
 				AD615C922AD805EE0092DD16 /* NotificationsManager.swift in Sources */,
+				AD615C9D2AD857610092DD16 /* SNSManagerTests.swift in Sources */,
 				AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */,
 				AD615C942AD813720092DD16 /* Environment.swift in Sources */,
 				AD615C902AD803D50092DD16 /* UserNotificationCenter.swift in Sources */,
 				AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */,
+				AD615C9E2AD857770092DD16 /* SNSService.swift in Sources */,
 				AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */,
 				AD615C8B2AD6C03D0092DD16 /* MockUserNotificationCenter.swift in Sources */,
 				AD615C8F2AD803BB0092DD16 /* NotificationSettings.swift in Sources */,
