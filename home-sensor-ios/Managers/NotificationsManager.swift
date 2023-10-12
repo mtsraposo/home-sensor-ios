@@ -50,13 +50,13 @@ class NotificationManager {
         }
     }
     
-    func getNotificationSettings(completion: @escaping (UNNotificationSettings) -> Void) {
-        self.userNotificationCenter.getNotificationSettings { settings in
+    func getNotificationSettings(completion: @escaping (NotificationSettingsProtocol) -> Void) {
+        self.userNotificationCenter.fetchNotificationSettings { settings in
             completion(settings)
         }
     }
 
-    func settingsCompletionHandler(completion: @escaping (Error?) -> Void) -> (UNNotificationSettings) -> Void {
+    func settingsCompletionHandler(completion: @escaping (Error?) -> Void) -> (NotificationSettingsProtocol) -> Void {
         return { settings in
             guard settings.authorizationStatus == .authorized else {
                 completion(NSError(domain: Environment.appDomain, code: 2, userInfo: [NSLocalizedDescriptionKey : "Authorization status not authorized"]))

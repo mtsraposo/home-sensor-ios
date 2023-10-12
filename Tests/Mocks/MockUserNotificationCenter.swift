@@ -10,7 +10,7 @@ class MockUserNotificationCenter: UserNotificationCenter {
         completionHandler(authorizationGranted, authorizationError)
     }
     
-    func getNotificationSettings(completionHandler: @escaping (UNNotificationSettings) -> Void) {
+    func fetchNotificationSettings(completionHandler: @escaping (NotificationSettingsProtocol) -> Void) {
         if let settings = notificationSettings {
             completionHandler(settings)
         }

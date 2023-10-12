@@ -26,6 +26,7 @@
 		AD615C922AD805EE0092DD16 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */; };
 		AD615C942AD813720092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
 		AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */; };
+		AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
 		AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */; };
 		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
@@ -490,6 +491,7 @@
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
 				AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */,
 				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
+				AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */,
 				AD615C822AD6BE880092DD16 /* UserNotificationCenter.swift in Sources */,
 				AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */,
 			);

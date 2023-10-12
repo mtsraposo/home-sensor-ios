@@ -10,3 +10,5 @@ protocol NotificationSettingsProtocol {
     var alertSetting: UNNotificationSetting { get }
     var alertStyle: UNAlertStyle { get }
 }
+
+extension UNNotificationSettings: NotificationSettingsProtocol { }
