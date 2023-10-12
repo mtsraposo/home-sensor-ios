@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  home-sensor-ios
-//
-//  Created by Matheus Raposo on 09/10/23.
-//
-
 import Foundation
 
 import UIKit

@@ -1,22 +1,31 @@
-//
-//  NotificationsManager.swift
-//  home-sensor-ios
-//
-//  Created by Matheus Raposo on 09/10/23.
-//
-
 import Foundation
 import UserNotifications
 import UIKit
 
 class NotificationManager {
     
+    private let userNotificationCenter: UserNotificationCenter
+    private let application: Application
+    
+    init(userNotificationCenter: UserNotificationCenter = UNUserNotificationCenter.current(),
+         application: Application = UIApplication.shared) {
+        self.userNotificationCenter = userNotificationCenter
+        self.application = application
+    }
+    
     func registerForRemoteNotifications(completion: @escaping (Error?) -> Void) {
-        requestAuthorization(completion: self.authorizationCompletionHandler(completion: completion))
+        self.requestAuthorization(
+            completion: self.authorizationCompletionHandler(
+                completion: completion
+            )
+        )
     }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+        self.userNotificationCenter.requestAuthorization(
+            options: [.alert, .sound, .badge]
+        ) {
+            granted, error in
             completion(granted)
         }
     }
@@ -24,15 +33,25 @@ class NotificationManager {
     func authorizationCompletionHandler(completion: @escaping (Error?) -> Void) -> (Bool) -> Void {
         return { granted in
             guard granted else {
-                completion(NSError(domain: Environment.appDomain, code: 1, userInfo: [NSLocalizedDescriptionKey : "Authorization not granted"]))
+                completion(
+                    NSError(
+                        domain: Environment.appDomain,
+                        code: 1,
+                        userInfo: [NSLocalizedDescriptionKey : "Authorization not granted"]
+                    )
+                )
                 return
             }
-            self.getNotificationSettings(completion: self.settingsCompletionHandler(completion: completion))
+            self.getNotificationSettings(
+                completion: self.settingsCompletionHandler(
+                    completion: completion
+                )
+            )
         }
     }
     
     func getNotificationSettings(completion: @escaping (UNNotificationSettings) -> Void) {
-        UNUserNotificationCenter.current().getNotificationSettings { settings in
+        self.userNotificationCenter.getNotificationSettings { settings in
             completion(settings)
         }
     }
@@ -44,7 +63,7 @@ class NotificationManager {
                 return
             }
             DispatchQueue.main.async {
-                UIApplication.shared.registerForRemoteNotifications()
+                self.application.registerForRemoteNotifications()
                 completion(nil)
             }
         }
