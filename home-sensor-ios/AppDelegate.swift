@@ -5,7 +5,7 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    
+
     let notificationManager = NotificationManager()
     let snsManager = SNSManager()
 

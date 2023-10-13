@@ -32,6 +32,8 @@
 		AD615C9E2AD857770092DD16 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C982AD856BD0092DD16 /* SNSService.swift */; };
 		AD615C9F2AD8577B0092DD16 /* MockSNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */; };
 		AD615CA02AD857890092DD16 /* SNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C782AD6B2990092DD16 /* SNSManager.swift */; };
+		AD615CA22AD863570092DD16 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615CA12AD863570092DD16 /* MainViewController.swift */; };
+		AD615CA42AD95A710092DD16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615CA32AD95A710092DD16 /* SceneDelegate.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
 		AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */; };
 		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
@@ -76,6 +78,8 @@
 		AD615C982AD856BD0092DD16 /* SNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSService.swift; sourceTree = "<group>"; };
 		AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSNSService.swift; sourceTree = "<group>"; };
 		AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSManagerTests.swift; sourceTree = "<group>"; };
+		AD615CA12AD863570092DD16 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AD615CA32AD95A710092DD16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD70959F2AD18955003C3C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7095A22AD18955003C3C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -206,7 +210,9 @@
 				AD70959F2AD18955003C3C74 /* Assets.xcassets */,
 				AD7095A12AD18955003C3C74 /* Preview Content */,
 				AD615C6B2AD41D000092DD16 /* AppDelegate.swift */,
+				AD615CA12AD863570092DD16 /* MainViewController.swift */,
 				AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */,
+				AD615CA32AD95A710092DD16 /* SceneDelegate.swift */,
 			);
 			path = "home-sensor-ios";
 			sourceTree = "<group>";
@@ -504,8 +510,10 @@
 				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
 				AD615C992AD856BD0092DD16 /* SNSService.swift in Sources */,
 				AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */,
+				AD615CA42AD95A710092DD16 /* SceneDelegate.swift in Sources */,
 				AD615C822AD6BE880092DD16 /* UserNotificationCenter.swift in Sources */,
 				AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */,
+				AD615CA22AD863570092DD16 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,10 +691,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"home-sensor-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4XU8SM3UFQ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "home-sensor-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -713,10 +722,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"home-sensor-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4XU8SM3UFQ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "home-sensor-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
