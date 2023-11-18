@@ -8,6 +8,7 @@ DerivedData/
 *.mode2v3
 *.perspectivev3
 xcuserdata/
+*.xcscheme
 
 # Carthage Directories
 Carthage/Build/
@@ -19,6 +20,7 @@ Carthage/Build/
 .DS_Store
 *.swp
 *~.nib
+certificate.p12
 
 # Xcode Workspace Checkpoints
 .xccheckout

@@ -39,6 +39,9 @@
 		AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095AC2AD18955003C3C74 /* home_sensor_iosTests.swift */; };
 		AD7095B72AD18955003C3C74 /* home_sensor_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */; };
 		AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */; };
+		AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E8C432B05594800F719C0 /* MqttManager.swift */; };
+		AD7E8C492B06743800F719C0 /* certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = AD7E8C482B06743700F719C0 /* certificate.p12 */; };
+		E7A30D20BC6611689BD399CA /* Pods_home_sensor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		49BCB93682A096FE62726061 /* Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A89E93DCCA60799B6CCB376 /* Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios-home-sensor-iosUITests/Pods-home-sensor-ios-home-sensor-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D88FABF09CBCA90B4B52D7A /* Pods-home-sensor-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-iosTests.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-iosTests/Pods-home-sensor-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD615C6B2AD41D000092DD16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD615C6D2AD41E1D0092DD16 /* AppDelegate+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notification.swift"; sourceTree = "<group>"; };
 		AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		AD7095B22AD18955003C3C74 /* home-sensor-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-sensor-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7095B62AD18955003C3C74 /* home_sensor_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITests.swift; sourceTree = "<group>"; };
 		AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD7E8C432B05594800F719C0 /* MqttManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManager.swift; sourceTree = "<group>"; };
+		AD7E8C482B06743700F719C0 /* certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.p12; sourceTree = "<group>"; };
 		B7CFF44E9CE817514DA290C8 /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios_home_sensor_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03160B2EED79DE94629F98D /* Pods-home-sensor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		DDF4E2590970AAA4EED581B9 /* Pods-home-sensor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				149002D7F8D1190473AD7600 /* (null) in Frameworks */,
+				E7A30D20BC6611689BD399CA /* Pods_home_sensor_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +134,7 @@
 			children = (
 				AD615C782AD6B2990092DD16 /* SNSManager.swift */,
 				AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */,
+				AD7E8C432B05594800F719C0 /* MqttManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 		AD70958F2AD18952003C3C74 = {
 			isa = PBXGroup;
 			children = (
+				AD7E8C482B06743700F719C0 /* certificate.p12 */,
 				AD615C832AD6BF480092DD16 /* Tests */,
 				AD70959A2AD18952003C3C74 /* home-sensor-ios */,
 				AD7095AB2AD18955003C3C74 /* home-sensor-iosTests */,
@@ -261,6 +270,7 @@
 			children = (
 				B7CFF44E9CE817514DA290C8 /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */,
 				3C51015D461858CA9A536062 /* Pods_home_sensor_iosTests.framework */,
+				A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -375,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */,
+				AD7E8C492B06743800F719C0 /* certificate.p12 in Resources */,
 				AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD615C882AD6BF770092DD16 /* Application.swift in Sources */,
+				AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */,
 				AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */,
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
 				AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */,

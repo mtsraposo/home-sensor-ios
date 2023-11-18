@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UNUserNotificationCenter.current().delegate = self
     
-        notificationManager.registerForRemoteNotifications { error in
+        notificationManager.requestAuthorization { granted, error in
             if let error = error {
                 print("Failed to register for remote notifications: \(error)")
             } else {
@@ -37,6 +37,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register: \(error)")
     }
-
 }
-
