@@ -3,21 +3,15 @@ import CocoaMQTT
 import Security
 
 class MQTTManager {
-    private let mqttClient: CocoaMQTT5
-    private let userNotificationCenter: UNUserNotificationCenter
+    var mqttClient: CocoaMQTT5 = CocoaMQTT5(
+        clientID: Environment.mqttClientId,
+        host: Environment.mqttServer,
+        port: Environment.mqttPort!
+    )
+    var userNotificationCenter: UNUserNotificationCenterProtocol = UNUserNotificationCenter.current()
 
-    init(
-        userNotificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current(),
-        mqttClient: CocoaMQTT5 = CocoaMQTT5(
-            clientID: Environment.mqttClientId,
-            host: Environment.mqttServer,
-            port: Environment.mqttPort!)
-    ){
-        self.userNotificationCenter = userNotificationCenter
-        self.mqttClient = mqttClient
-        
+    init() {
         self.authenticate();
-
         mqttClient.didReceiveMessage = self.didReceiveMessage
     }
 
@@ -48,10 +42,7 @@ class MQTTManager {
    }
     
     func readP12File(certName: String, certPassword: String) -> CFArray? {
-        let resourcePath = Bundle.main.path(forResource: certName, ofType: "p12")
-        
-        guard let filePath = resourcePath, let p12Data = NSData(contentsOfFile: filePath) else {
-            print("Failed to open the certificate file: \(certName).p12")
+        guard let p12Data = extractP12Data(certName: certName) else {
             return nil
         }
 
@@ -72,6 +63,17 @@ class MQTTManager {
         
         return items
     }
+    
+    func extractP12Data(certName: String) -> NSData? {
+        let resourcePath = Bundle.main.path(forResource: certName, ofType: "p12")
+        
+        guard let filePath = resourcePath, let p12Data = NSData(contentsOfFile: filePath) else {
+            print("Failed to open the certificate file: \(certName).p12")
+            return nil
+        }
+        
+        return p12Data
+    }
 
     func connect() {
         if !mqttClient.connect() {
@@ -85,19 +87,23 @@ class MQTTManager {
     }
     
     func didReceiveMessage(_ mqtt: CocoaMQTT5, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, _ decode: MqttDecodePublish?) {
-        self.triggerLocalNotification(with: message.string)
+        self.triggerLocalNotification(with: message.string) { error in
+            if let error = error {
+                print("Error scheduling local notification: \(error)")
+            } else {
+                print("Successfully triggered local notification")
+            }
+        }
     }
 
-    private func triggerLocalNotification(with message: String?) {
+    func triggerLocalNotification(with message: String?, completion: @escaping (Error?) -> Void) {
         let content = UNMutableNotificationContent()
         content.title = "Presence"
         content.body = message ?? ""
         content.sound = UNNotificationSound.default
         let request = UNNotificationRequest(identifier: "home_sensor", content: content, trigger: nil)
         self.userNotificationCenter.add(request) { error in
-            if let error = error {
-                print("Error scheduling local notification: \(error)")
-            }
+            completion(error)
         }
     }
 }

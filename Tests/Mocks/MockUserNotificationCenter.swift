@@ -1,15 +1,25 @@
 import Foundation
 import UserNotifications
 
-class MockUserNotificationCenter: UNUserNotificationCenter {
+class MockUserNotificationCenter: UNUserNotificationCenterProtocol {
     var authorizationGranted: Bool = false
     var authorizationError: Error?
+    var notificationRequest: UNNotificationRequest?
     var notificationSettings: NotificationSettingsProtocol?
     
-    public init() {
+    func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping (Bool, Error?) -> Void) {
+        if !authorizationGranted {
+            authorizationError = NSError(domain: "Test", code: 1, userInfo: nil)
+        }
+        completionHandler(authorizationGranted, authorizationError)
     }
     
-    override func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping (Bool, Error?) -> Void) {
-        completionHandler(authorizationGranted, authorizationError)
+    func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: ((Error?) -> Void)?) {
+        notificationRequest = request
+        if request.content.body == "error" {
+            completionHandler?(NSError(domain: "Test", code: 1, userInfo: nil))
+        } else {
+            completionHandler?(nil)
+        }
     }
 }

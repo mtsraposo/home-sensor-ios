@@ -15,23 +15,13 @@
 		AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */; };
 		AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */; };
 		AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
-		AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C782AD6B2990092DD16 /* SNSManager.swift */; };
-		AD615C822AD6BE880092DD16 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UserNotificationCenter.swift */; };
 		AD615C882AD6BF770092DD16 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C872AD6BF770092DD16 /* Application.swift */; };
-		AD615C8B2AD6C03D0092DD16 /* MockUserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */; };
-		AD615C8C2AD6C0410092DD16 /* MockApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C892AD6BF9F0092DD16 /* MockApplication.swift */; };
-		AD615C8F2AD803BB0092DD16 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */; };
-		AD615C902AD803D50092DD16 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UserNotificationCenter.swift */; };
+		AD615C8F2AD803BB0092DD16 /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettingsProtocol.swift */; };
 		AD615C912AD8052F0092DD16 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C872AD6BF770092DD16 /* Application.swift */; };
 		AD615C922AD805EE0092DD16 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */; };
 		AD615C942AD813720092DD16 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C762AD4B6A10092DD16 /* Environment.swift */; };
 		AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */; };
-		AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */; };
-		AD615C992AD856BD0092DD16 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C982AD856BD0092DD16 /* SNSService.swift */; };
-		AD615C9D2AD857610092DD16 /* SNSManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */; };
-		AD615C9E2AD857770092DD16 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C982AD856BD0092DD16 /* SNSService.swift */; };
-		AD615C9F2AD8577B0092DD16 /* MockSNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */; };
-		AD615CA02AD857890092DD16 /* SNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C782AD6B2990092DD16 /* SNSManager.swift */; };
+		AD615C972AD817FB0092DD16 /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C8D2AD802B80092DD16 /* NotificationSettingsProtocol.swift */; };
 		AD615CA22AD863570092DD16 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615CA12AD863570092DD16 /* MainViewController.swift */; };
 		AD615CA42AD95A710092DD16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615CA32AD95A710092DD16 /* SceneDelegate.swift */; };
 		AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD70959F2AD18955003C3C74 /* Assets.xcassets */; };
@@ -41,6 +31,11 @@
 		AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */; };
 		AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E8C432B05594800F719C0 /* MqttManager.swift */; };
 		AD7E8C492B06743800F719C0 /* certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = AD7E8C482B06743700F719C0 /* certificate.p12 */; };
+		ADFD76612B0917010094B151 /* MqttManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD76602B0917010094B151 /* MqttManagerTests.swift */; };
+		ADFD76672B0935660094B151 /* UNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */; };
+		ADFD766A2B09381A0094B151 /* MockUserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */; };
+		ADFD766B2B0938870094B151 /* MqttManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E8C432B05594800F719C0 /* MqttManager.swift */; };
+		ADFD766C2B0938AE0094B151 /* UNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */; };
 		E7A30D20BC6611689BD399CA /* Pods_home_sensor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,16 +67,11 @@
 		AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerTests.swift; sourceTree = "<group>"; };
 		AD615C762AD4B6A10092DD16 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		AD615C782AD6B2990092DD16 /* SNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSManager.swift; sourceTree = "<group>"; };
-		AD615C812AD6BE880092DD16 /* UserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenter.swift; sourceTree = "<group>"; };
+		AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNUserNotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserNotificationCenter.swift; sourceTree = "<group>"; };
 		AD615C872AD6BF770092DD16 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		AD615C892AD6BF9F0092DD16 /* MockApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplication.swift; sourceTree = "<group>"; };
-		AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
+		AD615C8D2AD802B80092DD16 /* NotificationSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsProtocol.swift; sourceTree = "<group>"; };
 		AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationSettings.swift; sourceTree = "<group>"; };
-		AD615C982AD856BD0092DD16 /* SNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSService.swift; sourceTree = "<group>"; };
-		AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSNSService.swift; sourceTree = "<group>"; };
-		AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSManagerTests.swift; sourceTree = "<group>"; };
 		AD615CA12AD863570092DD16 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD615CA32AD95A710092DD16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD7095982AD18952003C3C74 /* home-sensor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-sensor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +84,7 @@
 		AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_sensor_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD7E8C432B05594800F719C0 /* MqttManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManager.swift; sourceTree = "<group>"; };
 		AD7E8C482B06743700F719C0 /* certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.p12; sourceTree = "<group>"; };
+		ADFD76602B0917010094B151 /* MqttManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManagerTests.swift; sourceTree = "<group>"; };
 		B7CFF44E9CE817514DA290C8 /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios_home_sensor_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03160B2EED79DE94629F98D /* Pods-home-sensor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		DDF4E2590970AAA4EED581B9 /* Pods-home-sensor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +123,6 @@
 		AD615C6F2AD4B2C00092DD16 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				AD615C782AD6B2990092DD16 /* SNSManager.swift */,
 				AD615C702AD4B2D10092DD16 /* NotificationsManager.swift */,
 				AD7E8C432B05594800F719C0 /* MqttManager.swift */,
 			);
@@ -143,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AD615C732AD4B3260092DD16 /* NotificationManagerTests.swift */,
-				AD615C9C2AD857610092DD16 /* SNSManagerTests.swift */,
+				ADFD76602B0917010094B151 /* MqttManagerTests.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -160,10 +150,9 @@
 		AD615C802AD6BE750092DD16 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AD615C812AD6BE880092DD16 /* UserNotificationCenter.swift */,
+				AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */,
 				AD615C872AD6BF770092DD16 /* Application.swift */,
-				AD615C8D2AD802B80092DD16 /* NotificationSettings.swift */,
-				AD615C982AD856BD0092DD16 /* SNSService.swift */,
+				AD615C8D2AD802B80092DD16 /* NotificationSettingsProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -180,9 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */,
-				AD615C892AD6BF9F0092DD16 /* MockApplication.swift */,
 				AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */,
-				AD615C9A2AD856EB0092DD16 /* MockSNSService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -518,12 +505,10 @@
 				AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */,
 				AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */,
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
-				AD615C7F2AD6B7960092DD16 /* SNSManager.swift in Sources */,
 				AD615C712AD4B2D10092DD16 /* NotificationsManager.swift in Sources */,
-				AD615C992AD856BD0092DD16 /* SNSService.swift in Sources */,
-				AD615C972AD817FB0092DD16 /* NotificationSettings.swift in Sources */,
+				AD615C972AD817FB0092DD16 /* NotificationSettingsProtocol.swift in Sources */,
 				AD615CA42AD95A710092DD16 /* SceneDelegate.swift in Sources */,
-				AD615C822AD6BE880092DD16 /* UserNotificationCenter.swift in Sources */,
+				ADFD76672B0935660094B151 /* UNUserNotificationCenterProtocol.swift in Sources */,
 				AD615C6E2AD41E1D0092DD16 /* AppDelegate+Notification.swift in Sources */,
 				AD615CA22AD863570092DD16 /* MainViewController.swift in Sources */,
 			);
@@ -533,20 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD615C8C2AD6C0410092DD16 /* MockApplication.swift in Sources */,
-				AD615C9F2AD8577B0092DD16 /* MockSNSService.swift in Sources */,
-				AD615CA02AD857890092DD16 /* SNSManager.swift in Sources */,
+				ADFD766A2B09381A0094B151 /* MockUserNotificationCenter.swift in Sources */,
+				ADFD766B2B0938870094B151 /* MqttManager.swift in Sources */,
 				AD615C912AD8052F0092DD16 /* Application.swift in Sources */,
 				AD615C922AD805EE0092DD16 /* NotificationsManager.swift in Sources */,
-				AD615C9D2AD857610092DD16 /* SNSManagerTests.swift in Sources */,
 				AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */,
 				AD615C942AD813720092DD16 /* Environment.swift in Sources */,
-				AD615C902AD803D50092DD16 /* UserNotificationCenter.swift in Sources */,
 				AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */,
-				AD615C9E2AD857770092DD16 /* SNSService.swift in Sources */,
+				ADFD76612B0917010094B151 /* MqttManagerTests.swift in Sources */,
+				ADFD766C2B0938AE0094B151 /* UNUserNotificationCenterProtocol.swift in Sources */,
 				AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */,
-				AD615C8B2AD6C03D0092DD16 /* MockUserNotificationCenter.swift in Sources */,
-				AD615C8F2AD803BB0092DD16 /* NotificationSettings.swift in Sources */,
+				AD615C8F2AD803BB0092DD16 /* NotificationSettingsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

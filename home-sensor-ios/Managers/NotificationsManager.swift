@@ -4,11 +4,9 @@ import UIKit
 
 class NotificationManager {
 
-    private let userNotificationCenter: UNUserNotificationCenter
+    var userNotificationCenter: UNUserNotificationCenterProtocol = UNUserNotificationCenter.current()
 
-    init(userNotificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current()) {
-        self.userNotificationCenter = userNotificationCenter
-    }
+    init() {}
 
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
         self.userNotificationCenter.requestAuthorization(

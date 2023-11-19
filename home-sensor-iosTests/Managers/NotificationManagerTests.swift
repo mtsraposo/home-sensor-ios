@@ -3,20 +3,15 @@ import XCTest
 
 class NotificationManagerTests: XCTestCase {
     
-    var notificationManager: NotificationManager!
-    var mockUserNotificationCenter: MockUserNotificationCenter!
+    var notificationManager = NotificationManager()
+    var mockUserNotificationCenter = MockUserNotificationCenter()
 
     override func setUp() {
         super.setUp()
-        notificationManager = NotificationManager(
-            userNotificationCenter: mockUserNotificationCenter
-        )
-        mockUserNotificationCenter = MockUserNotificationCenter()
+        notificationManager.userNotificationCenter = mockUserNotificationCenter
     }
     
     override func tearDown() {
-        notificationManager = nil
-        mockUserNotificationCenter = nil
         super.tearDown()
     }
     
@@ -47,8 +42,8 @@ class NotificationManagerTests: XCTestCase {
         mockUserNotificationCenter.authorizationGranted = false
         let expectation = self.expectation(description: "Completion handler invoked")
         notificationManager.requestAuthorization { granted, error in
-            XCTAssertNotNil(error)
             XCTAssertFalse(granted)
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         
