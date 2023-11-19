@@ -3,10 +3,12 @@ import XCTest
 
 class MqttManagerTests: XCTestCase {
     var mqttManager = MQTTManager()
+    var mockCocoaMQTT5 = MockCocoaMQTT5()
     var mockUserNotificationCenter = MockUserNotificationCenter()
     
     override func setUp() {
         super.setUp()
+        mqttManager.mqttClient = mockCocoaMQTT5
         mqttManager.userNotificationCenter = mockUserNotificationCenter
     }
     

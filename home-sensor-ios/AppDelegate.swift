@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
         notificationManager.requestAuthorization { granted, error in
             if let error = error {
-                print("Failed to register for remote notifications: \(error)")
+                print("Failed to register for local notifications: \(error)")
             } else {
-                print("Successfully registered for remote notifications")
+                print("Successfully registered for local notifications")
             }
         }
         

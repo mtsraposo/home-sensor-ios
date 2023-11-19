@@ -31,11 +31,14 @@
 		AD7095B92AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7095B82AD18955003C3C74 /* home_sensor_iosUITestsLaunchTests.swift */; };
 		AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E8C432B05594800F719C0 /* MqttManager.swift */; };
 		AD7E8C492B06743800F719C0 /* certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = AD7E8C482B06743700F719C0 /* certificate.p12 */; };
-		ADFD76612B0917010094B151 /* MqttManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD76602B0917010094B151 /* MqttManagerTests.swift */; };
 		ADFD76672B0935660094B151 /* UNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */; };
 		ADFD766A2B09381A0094B151 /* MockUserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */; };
 		ADFD766B2B0938870094B151 /* MqttManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E8C432B05594800F719C0 /* MqttManager.swift */; };
 		ADFD766C2B0938AE0094B151 /* UNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */; };
+		ADFD76722B0A444A0094B151 /* MqttManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD76602B0917010094B151 /* MqttManagerTests.swift */; };
+		ADFD76732B0A44750094B151 /* CocoaMQTT5Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */; };
+		ADFD76742B0A44760094B151 /* CocoaMQTT5Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */; };
+		ADFD76752B0A45140094B151 /* MockCocoaMQTT5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD76702B0A3F570094B151 /* MockCocoaMQTT5.swift */; };
 		E7A30D20BC6611689BD399CA /* Pods_home_sensor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,8 @@
 		AD7E8C432B05594800F719C0 /* MqttManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManager.swift; sourceTree = "<group>"; };
 		AD7E8C482B06743700F719C0 /* certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.p12; sourceTree = "<group>"; };
 		ADFD76602B0917010094B151 /* MqttManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManagerTests.swift; sourceTree = "<group>"; };
+		ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaMQTT5Protocol.swift; sourceTree = "<group>"; };
+		ADFD76702B0A3F570094B151 /* MockCocoaMQTT5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCocoaMQTT5.swift; sourceTree = "<group>"; };
 		B7CFF44E9CE817514DA290C8 /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios_home_sensor_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03160B2EED79DE94629F98D /* Pods-home-sensor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		DDF4E2590970AAA4EED581B9 /* Pods-home-sensor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 				AD615C812AD6BE880092DD16 /* UNUserNotificationCenterProtocol.swift */,
 				AD615C872AD6BF770092DD16 /* Application.swift */,
 				AD615C8D2AD802B80092DD16 /* NotificationSettingsProtocol.swift */,
+				ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 			children = (
 				AD615C852AD6BF6B0092DD16 /* MockUserNotificationCenter.swift */,
 				AD615C952AD815DF0092DD16 /* MockNotificationSettings.swift */,
+				ADFD76702B0A3F570094B151 /* MockCocoaMQTT5.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -502,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD615C882AD6BF770092DD16 /* Application.swift in Sources */,
+				ADFD76742B0A44760094B151 /* CocoaMQTT5Protocol.swift in Sources */,
 				AD7E8C442B05594800F719C0 /* MqttManager.swift in Sources */,
 				AD615C6C2AD41D000092DD16 /* AppDelegate.swift in Sources */,
 				AD615C772AD4B6A10092DD16 /* Environment.swift in Sources */,
@@ -519,13 +527,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADFD766A2B09381A0094B151 /* MockUserNotificationCenter.swift in Sources */,
+				ADFD76732B0A44750094B151 /* CocoaMQTT5Protocol.swift in Sources */,
 				ADFD766B2B0938870094B151 /* MqttManager.swift in Sources */,
+				ADFD76752B0A45140094B151 /* MockCocoaMQTT5.swift in Sources */,
 				AD615C912AD8052F0092DD16 /* Application.swift in Sources */,
 				AD615C922AD805EE0092DD16 /* NotificationsManager.swift in Sources */,
+				ADFD76722B0A444A0094B151 /* MqttManagerTests.swift in Sources */,
 				AD615C742AD4B3260092DD16 /* NotificationManagerTests.swift in Sources */,
 				AD615C942AD813720092DD16 /* Environment.swift in Sources */,
 				AD7095AD2AD18955003C3C74 /* home_sensor_iosTests.swift in Sources */,
-				ADFD76612B0917010094B151 /* MqttManagerTests.swift in Sources */,
 				ADFD766C2B0938AE0094B151 /* UNUserNotificationCenterProtocol.swift in Sources */,
 				AD615C962AD815DF0092DD16 /* MockNotificationSettings.swift in Sources */,
 				AD615C8F2AD803BB0092DD16 /* NotificationSettingsProtocol.swift in Sources */,

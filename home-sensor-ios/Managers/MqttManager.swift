@@ -3,7 +3,7 @@ import CocoaMQTT
 import Security
 
 class MQTTManager {
-    var mqttClient: CocoaMQTT5 = CocoaMQTT5(
+    var mqttClient: CocoaMQTT5Protocol = CocoaMQTT5(
         clientID: Environment.mqttClientId,
         host: Environment.mqttServer,
         port: Environment.mqttPort!
@@ -83,7 +83,7 @@ class MQTTManager {
     }
 
     func subscribe() {
-        mqttClient.subscribe(Environment.mqttTopic)
+        mqttClient.subscribe(Environment.mqttTopic, qos: .qos1)
     }
     
     func didReceiveMessage(_ mqtt: CocoaMQTT5, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, _ decode: MqttDecodePublish?) {
