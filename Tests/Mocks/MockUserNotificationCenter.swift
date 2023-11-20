@@ -4,6 +4,7 @@ import UserNotifications
 class MockUserNotificationCenter: UNUserNotificationCenterProtocol {
     var authorizationGranted: Bool = false
     var authorizationError: Error?
+    var notificationError: Error?
     var notificationRequest: UNNotificationRequest?
     var notificationSettings: NotificationSettingsProtocol?
     
@@ -17,7 +18,8 @@ class MockUserNotificationCenter: UNUserNotificationCenterProtocol {
     func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: ((Error?) -> Void)?) {
         notificationRequest = request
         if request.content.body == "error" {
-            completionHandler?(NSError(domain: "Test", code: 1, userInfo: nil))
+            notificationError = NSError(domain: "Test", code: 1, userInfo: nil)
+            completionHandler?(notificationError)
         } else {
             completionHandler?(nil)
         }

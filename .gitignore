@@ -21,6 +21,7 @@ Carthage/Build/
 *.swp
 *~.nib
 certificate.p12
+certificate_legacy.p12
 
 # Xcode Workspace Checkpoints
 .xccheckout

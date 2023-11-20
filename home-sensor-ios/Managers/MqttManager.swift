@@ -1,97 +1,33 @@
 import Foundation
 import CocoaMQTT
 import Security
+import os
 
 class MQTTManager {
+    static let shared = MQTTManager()
     var mqttClient: CocoaMQTT5Protocol = CocoaMQTT5(
         clientID: Environment.mqttClientId,
         host: Environment.mqttServer,
         port: Environment.mqttPort!
     )
+    
+    let logger = Logger()
     var userNotificationCenter: UNUserNotificationCenterProtocol = UNUserNotificationCenter.current()
 
     init() {
-        self.authenticate();
-        mqttClient.didReceiveMessage = self.didReceiveMessage
-    }
-
-    func authenticate() {
-        mqttClient.enableSSL = true
-        let clientCertArray = getClientCertFromP12File(
-            certName: Environment.mqttCertificateFileName, 
-            certPassword: Environment.mqttCertificatePassword
-        )
-        var sslSettings: [String: NSObject] = [:]
-        sslSettings[kCFStreamSSLCertificates as String] = clientCertArray
-        mqttClient.sslSettings = sslSettings
+        self.mqttClient.didReceiveMessage = self.didReceiveMessage
+        self.mqttClient.keepAlive = 90
+        self.mqttClient.logLevel = .debug
     }
     
-    func getClientCertFromP12File(certName: String, certPassword: String) -> CFArray? {
-       guard let theArray = readP12File(certName: certName, certPassword: certPassword), 
-                CFArrayGetCount(theArray) > 0 else {
-           return nil
-       }
-       
-       let dictionary = (theArray as NSArray).object(at: 0)
-       guard let identity = (dictionary as AnyObject).value(forKey: kSecImportItemIdentity as String) else {
-           return nil
-       }
-       let certArray = [identity] as CFArray
-       
-       return certArray
-   }
-    
-    func readP12File(certName: String, certPassword: String) -> CFArray? {
-        guard let p12Data = extractP12Data(certName: certName) else {
-            return nil
-        }
-
-        let key = kSecImportExportPassphrase as String
-        let options : NSDictionary = [key: certPassword]
-        
-        var items : CFArray?
-        let securityError = SecPKCS12Import(p12Data, options, &items)
-        
-        guard securityError == errSecSuccess else {
-            if securityError == errSecAuthFailed {
-                print("ERROR: SecPKCS12Import returned errSecAuthFailed. Incorrect password?")
-            } else {
-                print("Failed to open the certificate file: \(certName).p12")
-            }
-            return nil
-        }
-        
-        return items
-    }
-    
-    func extractP12Data(certName: String) -> NSData? {
-        let resourcePath = Bundle.main.path(forResource: certName, ofType: "p12")
-        
-        guard let filePath = resourcePath, let p12Data = NSData(contentsOfFile: filePath) else {
-            print("Failed to open the certificate file: \(certName).p12")
-            return nil
-        }
-        
-        return p12Data
-    }
-
-    func connect() {
-        if !mqttClient.connect() {
-            print("Failed to connect MQTT client.")
-            return
-        }
-    }
-
-    func subscribe() {
-        mqttClient.subscribe(Environment.mqttTopic, qos: .qos1)
-    }
-    
-    func didReceiveMessage(_ mqtt: CocoaMQTT5, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, _ decode: MqttDecodePublish?) {
+    func didReceiveMessage(_ mqtt: CocoaMQTT5Protocol, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, _ decode: MqttDecodePublish?) {
+        let body = message.string!
+        logger.info("Received message: \(body)")
         self.triggerLocalNotification(with: message.string) { error in
             if let error = error {
-                print("Error scheduling local notification: \(error)")
+                self.logger.error("Error scheduling local notification: \(error)")
             } else {
-                print("Successfully triggered local notification")
+                self.logger.info("Successfully triggered local notification")
             }
         }
     }
@@ -105,5 +41,78 @@ class MQTTManager {
         self.userNotificationCenter.add(request) { error in
             completion(error)
         }
+    }
+    
+    func connect() {
+        if !self.mqttClient.connect() {
+            logger.error("Failed to connect MQTT client.")
+            return
+        }
+        logger.info("Successfully connected to MQTT client.")
+    }
+
+    func subscribe() {
+        self.mqttClient.subscribe(Environment.mqttTopic, qos: .qos0)
+        logger.info("Successfully subscribed to MQTT topic.")
+    }
+
+    func authenticate() {
+        self.mqttClient.enableSSL = true
+        let clientCertArray = getClientCertFromP12File(
+            certName: Environment.mqttCertificateFileName, 
+            certPassword: Environment.mqttCertificatePassword
+        )
+        var sslSettings: [String: NSObject] = [:]
+        sslSettings[kCFStreamSSLCertificates as String] = clientCertArray
+        self.mqttClient.sslSettings = sslSettings
+    }
+    
+    func getClientCertFromP12File(certName: String, certPassword: String) -> CFArray? {
+        guard let p12Data = extractP12Data(certName: certName) else {
+            return nil
+        }
+        
+       guard let theArray = readP12File(p12Data: p12Data, certPassword: certPassword),
+                CFArrayGetCount(theArray) > 0 else {
+           return nil
+       }
+       
+       let dictionary = (theArray as NSArray).object(at: 0)
+       guard let identity = (dictionary as AnyObject).value(forKey: kSecImportItemIdentity as String) else {
+           return nil
+       }
+       let certArray = [identity] as CFArray
+       
+       return certArray
+   }
+    
+    func extractP12Data(certName: String) -> NSData? {
+        let resourcePath = Bundle.main.path(forResource: certName, ofType: "p12")
+        
+        guard let filePath = resourcePath, let p12Data = NSData(contentsOfFile: filePath) else {
+            logger.error("Failed to open the certificate file: \(certName).p12")
+            return nil
+        }
+        
+        return p12Data
+    }
+    
+    func readP12File(p12Data: NSData, certPassword: String) -> CFArray? {
+        let key = kSecImportExportPassphrase as NSString
+        let options : NSDictionary = [key: certPassword]
+        
+        var items : CFArray?
+        let securityError = SecPKCS12Import(p12Data, options, &items)
+        
+        guard securityError == errSecSuccess else {
+            if securityError == errSecAuthFailed {
+                logger.error("ERROR: SecPKCS12Import returned errSecAuthFailed. Incorrect password?")
+            } else {
+                logger.error("Failed to open the certificate file")
+            }
+            return nil
+        }
+        
+        return items
     }
 }

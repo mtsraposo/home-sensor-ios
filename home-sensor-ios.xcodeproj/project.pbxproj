@@ -39,6 +39,9 @@
 		ADFD76732B0A44750094B151 /* CocoaMQTT5Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */; };
 		ADFD76742B0A44760094B151 /* CocoaMQTT5Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */; };
 		ADFD76752B0A45140094B151 /* MockCocoaMQTT5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD76702B0A3F570094B151 /* MockCocoaMQTT5.swift */; };
+		ADFD76762B0A7FCE0094B151 /* certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = AD7E8C482B06743700F719C0 /* certificate.p12 */; };
+		ADFD76782B0A83DC0094B151 /* certificate_legacy.p12 in Resources */ = {isa = PBXBuildFile; fileRef = ADFD76772B0A83DC0094B151 /* certificate_legacy.p12 */; };
+		ADFD76792B0A83DC0094B151 /* certificate_legacy.p12 in Resources */ = {isa = PBXBuildFile; fileRef = ADFD76772B0A83DC0094B151 /* certificate_legacy.p12 */; };
 		E7A30D20BC6611689BD399CA /* Pods_home_sensor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59108A195112E06A885CBDA /* Pods_home_sensor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,7 @@
 		ADFD76602B0917010094B151 /* MqttManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttManagerTests.swift; sourceTree = "<group>"; };
 		ADFD766D2B0A3D3C0094B151 /* CocoaMQTT5Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaMQTT5Protocol.swift; sourceTree = "<group>"; };
 		ADFD76702B0A3F570094B151 /* MockCocoaMQTT5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCocoaMQTT5.swift; sourceTree = "<group>"; };
+		ADFD76772B0A83DC0094B151 /* certificate_legacy.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; name = certificate_legacy.p12; path = ../../Documents/connect_device_package/certificate_legacy.p12; sourceTree = "<group>"; };
 		B7CFF44E9CE817514DA290C8 /* Pods_home_sensor_ios_home_sensor_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_home_sensor_ios_home_sensor_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03160B2EED79DE94629F98D /* Pods-home-sensor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.release.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		DDF4E2590970AAA4EED581B9 /* Pods-home-sensor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home-sensor-ios.debug.xcconfig"; path = "Target Support Files/Pods-home-sensor-ios/Pods-home-sensor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		AD70958F2AD18952003C3C74 = {
 			isa = PBXGroup;
 			children = (
+				ADFD76772B0A83DC0094B151 /* certificate_legacy.p12 */,
 				AD7E8C482B06743700F719C0 /* certificate.p12 */,
 				AD615C832AD6BF480092DD16 /* Tests */,
 				AD70959A2AD18952003C3C74 /* home-sensor-ios */,
@@ -380,6 +385,7 @@
 			files = (
 				AD7095A32AD18955003C3C74 /* Preview Assets.xcassets in Resources */,
 				AD7E8C492B06743800F719C0 /* certificate.p12 in Resources */,
+				ADFD76782B0A83DC0094B151 /* certificate_legacy.p12 in Resources */,
 				AD7095A02AD18955003C3C74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +394,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFD76792B0A83DC0094B151 /* certificate_legacy.p12 in Resources */,
+				ADFD76762B0A7FCE0094B151 /* certificate.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
