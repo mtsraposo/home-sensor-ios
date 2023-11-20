@@ -39,7 +39,7 @@ class MqttManagerTests: XCTestCase {
     }
     
     func testDidReceiveMessage_Success() {
-        let message = "{\"message\": \"Test message\", \"detectedAt\": 1700481938}"
+        let message = "{\"message\": \"Test message\", \"detectedAt\": \"1700481938\"}"
         let mqttMessage = CocoaMQTT5Message(topic: "test-mqtt-topic", string: message)
         let decode = MqttDecodePublish()
         mqttManager.didReceiveMessage(mockCocoaMQTT5, didReceiveMessage: mqttMessage, id: 1, decode)
@@ -54,7 +54,7 @@ class MqttManagerTests: XCTestCase {
     }
     
     func testDidReceiveMessage_Error() {
-        let message = "{\"message\": \"error\", \"detectedAt\": 1700481938}"
+        let message = "{\"message\": \"error\", \"detectedAt\": \"1700481938\"}"
         let mqttMessage = CocoaMQTT5Message(topic: "test-mqtt-topic", string: message)
         let decode = MqttDecodePublish()
         mqttManager.didReceiveMessage(mockCocoaMQTT5, didReceiveMessage: mqttMessage, id: 1, decode)

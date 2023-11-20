@@ -9,6 +9,7 @@ protocol CocoaMQTT5Protocol: AnyObject {
     var enableSSL: Bool {get set}
     var sslSettings: [String: NSObject]? {get set}
     
+    var autoReconnect: Bool {get set}
     var keepAlive: UInt16 {get set}
     var logLevel: CocoaMQTTLoggerLevel {get set}
     

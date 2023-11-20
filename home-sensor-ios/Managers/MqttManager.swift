@@ -16,6 +16,7 @@ class MQTTManager {
 
     init() {
         self.mqttClient.didReceiveMessage = self.didReceiveMessage
+        self.mqttClient.autoReconnect = true
         self.mqttClient.keepAlive = 90
         self.mqttClient.logLevel = .debug
     }
@@ -151,9 +152,15 @@ extension PresenceMessage {
             return nil
         }
         
-        guard let detectedAtUnix = json["detectedAt"] as? Double
+        guard let detectedAtString = json["detectedAt"] as? String
         else {
             logger.error("Missing detectedAt in payload")
+            return nil
+        }
+        
+        guard let detectedAtUnix = Double(detectedAtString)
+        else {
+            logger.error("Invalid detectedAt: not a double")
             return nil
         }
         
