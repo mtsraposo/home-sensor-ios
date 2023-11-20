@@ -36,12 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 extension AppDelegate: CocoaMQTT5Delegate {
     func mqtt5(_ mqtt5: CocoaMQTT5, didConnectAck ack: CocoaMQTTCONNACKReasonCode, connAckData: MqttDecodeConnAck?) {
-        print("Received ACK")
         if ack == .success {
-            print("Successfully acked")
             if(connAckData != nil){
-                print("properties maximumPacketSize: \(String(describing: connAckData!.maximumPacketSize))")
-                print("properties topicAliasMaximum: \(String(describing: connAckData!.topicAliasMaximum))")
+                logger.info("properties maximumPacketSize: \(String(describing: connAckData!.maximumPacketSize))")
+                logger.info("properties topicAliasMaximum: \(String(describing: connAckData!.topicAliasMaximum))")
             }
             
             mqtt5.ping()
@@ -62,10 +60,8 @@ extension AppDelegate: CocoaMQTT5Delegate {
     }
     
     func mqtt5(_ mqtt5: CocoaMQTT5, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, publishData: MqttDecodePublish?) {
-        print("Received message \(message.string!)")
-        
         if(publishData != nil){
-            print("publish.contentType \(String(describing: publishData!.contentType))")
+            logger.info("publish.contentType \(String(describing: publishData!.contentType))")
         }
         
         let name = NSNotification.Name(rawValue: "MQTTMessageNotification")
@@ -75,7 +71,7 @@ extension AppDelegate: CocoaMQTT5Delegate {
     
     func mqtt5(_ mqtt5: CocoaMQTT5, didSubscribeTopics success: NSDictionary, failed: [String], subAckData: MqttDecodeSubAck?) {
         if(subAckData != nil){
-            print("subAckData.reasonCodes \(String(describing: subAckData!.reasonCodes))")
+            logger.info("subAckData.reasonCodes \(String(describing: subAckData!.reasonCodes))")
         }
     }
     
@@ -84,11 +80,11 @@ extension AppDelegate: CocoaMQTT5Delegate {
     }
     
     func mqtt5(_ mqtt5: CocoaMQTT5, didReceiveDisconnectReasonCode reasonCode: CocoaMQTTDISCONNECTReasonCode) {
-        print("disconnect res : \(reasonCode)")
+        
     }
     
     func mqtt5(_ mqtt5: CocoaMQTT5, didReceiveAuthReasonCode reasonCode: CocoaMQTTAUTHReasonCode) {
-        print("auth res : \(reasonCode)")
+        
     }
     
     func mqtt5DidPing(_ mqtt5: CocoaMQTT5) {
@@ -100,7 +96,7 @@ extension AppDelegate: CocoaMQTT5Delegate {
     }
     
     func mqtt5DidDisconnect(_ mqtt5: CocoaMQTT5, withError err: Error?) {
-        print("Disconnected MQTT client")
+        logger.info("Disconnected MQTT client")
         let name = NSNotification.Name(rawValue: "MQTTMessageNotificationDisconnect")
         NotificationCenter.default.post(name: name, object: nil)
     }

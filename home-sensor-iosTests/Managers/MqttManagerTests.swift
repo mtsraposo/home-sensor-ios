@@ -39,14 +39,14 @@ class MqttManagerTests: XCTestCase {
     }
     
     func testDidReceiveMessage_Success() {
-        let message = "Test message"
+        let message = "{\"message\": \"Test message\", \"detectedAt\": 1700481938}"
         let mqttMessage = CocoaMQTT5Message(topic: "test-mqtt-topic", string: message)
         let decode = MqttDecodePublish()
         mqttManager.didReceiveMessage(mockCocoaMQTT5, didReceiveMessage: mqttMessage, id: 1, decode)
         
         let content = UNMutableNotificationContent()
         content.title = "Presence"
-        content.body = message
+        content.body = "Test message"
         content.sound = UNNotificationSound.default
         let request = UNNotificationRequest(identifier: "home_sensor", content: content, trigger: nil)
         
@@ -54,7 +54,7 @@ class MqttManagerTests: XCTestCase {
     }
     
     func testDidReceiveMessage_Error() {
-        let message = "error"
+        let message = "{\"message\": \"error\", \"detectedAt\": 1700481938}"
         let mqttMessage = CocoaMQTT5Message(topic: "test-mqtt-topic", string: message)
         let decode = MqttDecodePublish()
         mqttManager.didReceiveMessage(mockCocoaMQTT5, didReceiveMessage: mqttMessage, id: 1, decode)

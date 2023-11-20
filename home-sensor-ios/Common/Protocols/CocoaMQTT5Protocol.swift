@@ -12,8 +12,6 @@ protocol CocoaMQTT5Protocol: AnyObject {
     var keepAlive: UInt16 {get set}
     var logLevel: CocoaMQTTLoggerLevel {get set}
     
-    var willMessage: CocoaMQTT5Message? {get set}
-    
     func connect() -> Bool
     func subscribe(_ topic: String, qos: CocoaMQTTQoS)
 }

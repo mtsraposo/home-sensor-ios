@@ -1,7 +1,4 @@
 PODS:
-  - AWSCore (2.33.4)
-  - AWSSNS (2.33.4):
-    - AWSCore (= 2.33.4)
   - CocoaMQTT (2.1.6):
     - CocoaMQTT/Core (= 2.1.6)
   - CocoaMQTT/Core (2.1.6):
@@ -9,23 +6,17 @@ PODS:
   - MqttCocoaAsyncSocket (1.0.8)
 
 DEPENDENCIES:
-  - AWSCore
-  - AWSSNS
   - CocoaMQTT
 
 SPEC REPOS:
   trunk:
-    - AWSCore
-    - AWSSNS
     - CocoaMQTT
     - MqttCocoaAsyncSocket
 
 SPEC CHECKSUMS:
-  AWSCore: 83e3416d2224ba98b61d8eadcfcb1f90f48fab82
-  AWSSNS: 42e957fa4e6c28d60d07c02db0ef8dea171cb055
   CocoaMQTT: 1f206228b29318eabdacad0c2e4e88575922c27a
   MqttCocoaAsyncSocket: 77d3b74f76228dd5a05d1f9526eab101d415b30c
 
-PODFILE CHECKSUM: 6eab227baaa8cfa256eb2a457df16938b775cdd2
+PODFILE CHECKSUM: b47d9ca54e58dc74baaba7d549d21a97a51ed378
 
 COCOAPODS: 1.13.0

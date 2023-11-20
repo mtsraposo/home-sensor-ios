@@ -21,15 +21,34 @@ class MQTTManager {
     }
     
     func didReceiveMessage(_ mqtt: CocoaMQTT5Protocol, didReceiveMessage message: CocoaMQTT5Message, id: UInt16, _ decode: MqttDecodePublish?) {
-        let body = message.string!
-        logger.info("Received message: \(body)")
-        self.triggerLocalNotification(with: message.string) { error in
+        logger.info("Received message: \(message.string!)")
+        guard let presenceMessage = decodePayload(message) else { return }
+        self.triggerLocalNotification(with: presenceMessage.body) { error in
             if let error = error {
                 self.logger.error("Error scheduling local notification: \(error)")
             } else {
                 self.logger.info("Successfully triggered local notification")
             }
         }
+    }
+    
+    func decodePayload(_ message: CocoaMQTT5Message) -> PresenceMessage?  {
+        guard let data = message.string!.data(using: .utf8)
+        else {
+            logger.error("Payload received is not a UTF-8 string")
+            return nil
+        }
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: [])
+        else {
+            logger.error("Payload received is not a JSON")
+            return nil
+        }
+        guard let message = PresenceMessage(json: json as! [String : Any])
+        else {
+            logger.error("Malformed payload")
+            return nil
+        }
+        return message
     }
 
     func triggerLocalNotification(with message: String?, completion: @escaping (Error?) -> Void) {
@@ -114,5 +133,32 @@ class MQTTManager {
         }
         
         return items
+    }
+}
+
+struct PresenceMessage {
+    let body: String
+    let detectedAt: NSDate
+}
+
+extension PresenceMessage {
+    init?(json: [String: Any]) {
+        let logger = Logger()
+
+        guard let body = json["message"] as? String
+        else {
+            logger.error("Missing message in payload")
+            return nil
+        }
+        
+        guard let detectedAtUnix = json["detectedAt"] as? Double
+        else {
+            logger.error("Missing detectedAt in payload")
+            return nil
+        }
+        
+        let detectedAt = NSDate(timeIntervalSince1970: detectedAtUnix)
+        self.body = body
+        self.detectedAt = detectedAt
     }
 }

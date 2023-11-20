@@ -7,9 +7,6 @@ struct Environment {
         }
         return appDomain
     }
-    static let snsTopicArn: String = ProcessInfo.processInfo.environment["SNS_TOPIC_ARN"] ?? ""
-    static let snsAccessKey: String = ProcessInfo.processInfo.environment["SNS_ACCESS_KEY"] ?? ""
-    static let snsSecretKey: String = ProcessInfo.processInfo.environment["SNS_SECRET_KEY"] ?? ""
     static let mqttCertificateFileName: String = ProcessInfo.processInfo.environment["MQTT_CERTIFICATE_FILE_NAME"] ?? ""
     static let mqttCertificatePassword: String = ProcessInfo.processInfo.environment["MQTT_CERTIFICATE_PASSWORD"] ?? ""
     static let mqttClientId: String = ProcessInfo.processInfo.environment["MQTT_CLIENT_ID"] ?? ""
