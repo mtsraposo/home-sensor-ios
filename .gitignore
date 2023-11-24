@@ -1,6 +1,7 @@
 # Derived Data and Build Products
 DerivedData/
 *.build/
+.idea
 
 # User-Specific Settings
 *.pbxuser
